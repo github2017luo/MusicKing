@@ -31,6 +31,7 @@ public class MainActivity extends Activity
 	SongQuality sqya = null;
 	Button btn1;
 	EditText edt1;
+	//For nothing
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -101,7 +102,7 @@ public class MainActivity extends Activity
 							}
 						});
 					thr.start();
-					thr.interrupt();
+					//thr.interrupt();
 				}
 			});
 	}
@@ -218,7 +219,7 @@ public class MainActivity extends Activity
 				t1.setText(srsa.getItems(0).get(p1).getName());			
 				t2.setText(artics);
 				for(Picture pics : spa){
-					Glide.with(getApplicationContext()).load(pics.getURL(0,0)).into(img);
+					Glide.with(getApplicationContext()).load(pics.getURL(200,200)).into(img);
 				}
 			}
 			catch (IOException e)
