@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MusicKing</string>
+	<string name="search_hint">在这里输入要搜索的音乐名称</string>
+	<string name="btn_search">搜索</string>
+	<string name="dl_the_song">下载该歌曲</string>
+	<string name="local_music">本地下载音乐</string>
+	<string name="pause_or_play">播放/暂停</string>
+    <string name="stops">停止</string>
+    <string name="always_plays">循环播放</string>
+	<string name="about_us">关于</string>
+	
+	<string name="developer">软件开发者</string>
+	<string name="dev_name">梦之黯蓝(Androhan)</string>
+	<string name="core_giver">主要贡献者</string>
+	<string name="giver_name">Fifth-Light(Liu Yujie)</string>
+	<string name="open_source">开放源代码许可</string>
+	<string name="view_website">访问官方开源网站</string>
+
+</resources>

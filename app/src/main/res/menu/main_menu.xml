@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/local_songs"
+        android:title="@string/local_music"/>
+	
+	<item
+		android:id="@+id/about"
+		android:title="@string/about_us" />
+    
+</menu>

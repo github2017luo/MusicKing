@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/nor_lay"
+		android:padding="8dp"
+		android:layout_margin="16dp">
+
+		<ImageView
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:gravity="center"
+			android:src="@drawable/ic_launcher"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/app_name"
+			android:textSize="16sp"
+			android:textColor="#FF000000"
+			android:gravity="center_horizontal"
+			android:layout_marginTop="2dp"/>
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="V 2.2.1"
+			android:textSize="14sp"
+			android:textColor="#FF000000"
+			android:gravity="center_horizontal"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/nor_lay"
+		android:layout_marginLeft="16dp"
+		android:orientation="vertical"
+		android:layout_marginRight="16dp"
+		android:layout_marginBottom="16dp"
+		android:padding="8dp">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/developer"
+				android:textColor="#FF000000"
+				android:textSize="14sp"
+				android:layout_gravity="center"
+				android:layout_weight="2.0"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/dev_name"
+				android:textSize="14sp"
+				android:layout_gravity="center"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:padding="4dp">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/core_giver"
+				android:textColor="#FF000000"
+				android:textSize="14sp"
+				android:layout_gravity="center"
+				android:layout_weight="2.0"/>
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:text="@string/giver_name"
+				android:textSize="14sp"
+				android:layout_gravity="center"/>
+
+		</LinearLayout>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:onClick="read_info"
+			android:layout_width="match_parent"
+			android:text="@string/open_source"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="@string/view_website"
+			android:onClick="offi_web"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

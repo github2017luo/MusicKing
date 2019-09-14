@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<ImageView
+		android:id="@+id/online_playImageView"
+		android:layout_width="match_parent"
+		android:layout_height="150dp"
+		android:layout_marginLeft="32dp"
+		android:layout_marginRight="32dp"
+		android:layout_marginTop="32dp"
+		android:scaleType="fitXY"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_marginTop="8dp"
+		android:padding="8dp">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="Text"
+			android:id="@+id/online_playTextViewSinger"
+			android:gravity="center_horizontal"
+			android:textColor="#FF000000"
+			android:textSize="18sp"
+			android:textStyle="bold"/>
+
+		<SeekBar
+			android:id="@+id/seekBar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_margin="10dp"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="bottom"
+			android:onClick="play"
+			android:text="开始/暂停/继续"
+			android:layout_marginTop="16dp"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:text="@string/dl_the_song"
+			android:onClick="dl_music"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+
