@@ -1,13 +1,18 @@
 package com.dream.music.LocalMusic;
 
-import android.graphics.*;
-import android.view.*;
-import android.widget.*;
-
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 import com.dream.music.R;
 import com.dream.music.util.FileUtil;
 import java.io.File;
@@ -24,7 +29,8 @@ public class MusicLists extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.localmusic);
 		lvw = findViewById(R.id.localmusicListView);
-		FileUtil.listDir("/storage/emulated/0/Android/data/com.dream.music/files/",lus);
+		String path = FileUtil.readFile("/sdcard/.dreams/MusicKing/save_path.info");
+		FileUtil.listDir(path,lus);
 		MyAdapter mar = new MyAdapter(lus);
 		lvw.setAdapter(mar);
 		lvw.setOnItemClickListener(new AdapterView.OnItemClickListener(){

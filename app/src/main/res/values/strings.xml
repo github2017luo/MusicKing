@@ -14,8 +14,13 @@
 	<string name="developer">软件开发者</string>
 	<string name="dev_name">梦之黯蓝(Androhan)</string>
 	<string name="core_giver">主要贡献者</string>
-	<string name="giver_name">Fifth-Light(Liu Yujie)</string>
+	<string name="giver_name">FifthLight(Liu Yujie)</string>
 	<string name="open_source">开放源代码许可</string>
 	<string name="view_website">访问官方开源网站</string>
+	
+	<string name="setting_title">应用设置</string>
+	<string name="setting_search_core">搜索引擎选择</string>
+	<string name="setting_save_path">下载位置修改</string>
+	<string name="setting_quality">音质选择</string>
 
 </resources>

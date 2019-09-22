@@ -26,5 +26,6 @@
 	    <activity android:name=".LocalMusic.PlayerActivity" />
 		<activity android:name=".AboutActivity" />
 		<activity android:name=".LicenseView" />
+		<activity android:name=".SettingGroup.SettingActivity" />
 	</application>
 </manifest>

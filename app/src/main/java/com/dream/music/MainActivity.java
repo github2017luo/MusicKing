@@ -1,27 +1,39 @@
 package com.dream.music;
 
-
-import android.view.*;
-import android.widget.*;
-import fifthlight.musiccore.search.*;
-import java.util.*;
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
+import com.dream.music.LocalMusic.MusicLists;
+import com.dream.music.OnlinePlay.UsePlay;
+import com.dream.music.R;
+import com.dream.music.util.FileUtil;
 import fifthlight.musiccore.Picture;
 import fifthlight.musiccore.artist.Artist;
 import fifthlight.musiccore.factory.NeteaseMusicFactory;
+import fifthlight.musiccore.search.NameSearch;
 import fifthlight.musiccore.search.searchresult.SearchResult;
 import fifthlight.musiccore.song.Song;
 import fifthlight.musiccore.song.songquality.SongQuality;
 import java.io.IOException;
-import com.alibaba.fastjson.JSONObject;
-import com.dream.music.util.FileUtil;
-import android.content.Intent;
-import com.dream.music.OnlinePlay.UsePlay;
-import com.dream.music.LocalMusic.MusicLists;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import com.dream.music.SettingGroup.SettingActivity;
 
 public class MainActivity extends Activity 
 {
@@ -41,8 +53,17 @@ public class MainActivity extends Activity
 		edt1 = findViewById(R.id.mainEditText);
 		btn1 = findViewById(R.id.mainButton);
 		//init();
+		ckeck_files();
 		event();
     }
+
+	private void ckeck_files()
+	{
+		// TODO: Implement this method
+		if(FileUtil.isFile("/sdcard/.dreams/MusicKing/save_path.info")){}else{
+			FileUtil.writeFile("/sdcard/.dreams/MusicKing/save_path.info","/storage/emulated/0/Android/data/com.dream.music/files/");
+		}
+	}
 
 	private void event()
 	{
@@ -126,6 +147,9 @@ public class MainActivity extends Activity
 				break;
 			case R.id.about:
 				startActivity(new Intent(getApplicationContext(),AboutActivity.class));
+				break;
+			case R.id.settings:
+				startActivity(new Intent(getApplicationContext(),SettingActivity.class));
 				break;
 				default:
 		}

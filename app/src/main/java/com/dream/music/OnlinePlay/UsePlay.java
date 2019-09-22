@@ -1,11 +1,13 @@
 package com.dream.music.OnlinePlay;
 
-import android.app.*;
-import android.widget.*;
-
+import android.app.Activity;
+import android.app.DownloadManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.dream.music.R;
@@ -65,6 +67,8 @@ public class UsePlay extends Activity
 		dmrt.setDestinationInExternalFilesDir(getApplicationContext(),null,ja.getString("name") + ".mp3");
 		//dmrt.setDestinationInExternalPublicDir("MusicKing", ja.getString("name") + ".mp3");
 		dmr.enqueue(dmrt);
+		String needs_path = FileUtil.readFile("/sdcard/.dreams/MusicKing/save_path.info");
+		FileUtil.moveFile("/storage/emulated/0/Android/data/com.dream.music/files/" + ja.getString("name") + ".mp3",needs_path + ja.getString("name") + ".mp3");
 	}
 	
 	@Override

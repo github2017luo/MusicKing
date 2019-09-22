@@ -1,17 +1,24 @@
 package com.dream.music.LocalMusic;
 
-import android.graphics.*;
-import android.media.*;
-import android.widget.*;
-import java.util.*;
-
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.MediaMetadataRetriever;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 import com.dream.music.R;
 import com.dream.music.util.FileUtil;
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class PlayerActivity extends Activity
 {
